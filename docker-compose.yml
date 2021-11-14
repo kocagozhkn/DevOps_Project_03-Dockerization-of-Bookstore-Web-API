@@ -10,10 +10,10 @@ services:
       MYSQL_USER: admin
       MYSQL_PASSWORD: MyDb123@abc
     networks:
-      - mirana-net
+      - hakan-net
     
   myapp:
-    image: mirana/bookstore_api:latest
+    image: hakan/bookstore_api:latest
     container_name: myapp
     restart: always
     depends_on:
@@ -21,8 +21,8 @@ services:
     ports:
       - "80:80"
     networks:
-      - mirana-net
+      - hakan-net
     
 networks:
-    mirana-net:
+    hakan-net:
       driver: bridge
